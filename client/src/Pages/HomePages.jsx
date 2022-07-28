@@ -1,6 +1,7 @@
 import { Box,Flex } from "@chakra-ui/react";
 import React from "react";
 import {Outlet} from "react-router-dom"
+import { HomePageMain } from "../Components/Home/HomePagesMain";
 export const HomePages=()=>{
 
     return (
@@ -19,6 +20,7 @@ export const HomePages=()=>{
               align='center'
               gap={4}
             >
+              <HomePageMain/>
               <Outlet/>
             </Flex>
             {/* all components import here end  */}

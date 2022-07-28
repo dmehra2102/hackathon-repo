@@ -1,13 +1,27 @@
 import React from 'react'
-import {Select} from "@chakra-ui/react"
+import {Menu,MenuButton,MenuList,MenuItem} from "@chakra-ui/react"
+import {Link} from "react-router-dom"
+
 function NavbarProductSelect() {
   return (
-    <Select placeholder='Product' textAlign='center' >
-        <option value="eng" border='none'  _hover='teal'>Engineering</option>
-        <option value="med" border='none'  >Medical</option>
-        <option value="art" border='none'  >Arts</option>
-        <option value="sci" border='none'  >Science</option>
-    </Select>
+    <Menu isLazy >
+    <MenuButton>Mentors</MenuButton>
+    <MenuList px='30px' py='5px' align='center'marginLeft='-90px' w='100px'>
+      <MenuItem >
+        <Link to='technicalMentors' _hover='teal'>Techical Mentors</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link to='scienceMentos'>
+          Science Mentors
+        </Link>
+      </MenuItem>
+      <MenuItem>
+        <Link to='mathmentors'>
+          Math Mentors
+        </Link>
+      </MenuItem>
+    </MenuList>
+  </Menu>
   )
 }
 
