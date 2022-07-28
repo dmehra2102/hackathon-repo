@@ -1,13 +1,15 @@
 import React from "react";
-import {Box,HStack,Flex} from "@chakra-ui/react"
+import {Box,HStack,Flex,Center,Button,Heading} from "@chakra-ui/react"
+import NavbarFeatures from "../NavbarFeatures/NavbarFeatures";
 export const Navbar=()=>{
 
     return (
         // main box of border part in navbar start
         <Box 
-          border='2px solid #CBD5E0'
+          border='1px solid #CBD5E0'
+          borderRadius='5px'
           w='100%'
-          h='75px'
+          h='70px'
         >
             {/* flex box inside three box which contain three components start */}
             <Flex
@@ -19,38 +21,49 @@ export const Navbar=()=>{
             >
                {/* first box contain logo of website starting box */}
                  <Box
-                  border='1px solid teal'
-                  w='15%'
-                  h='70px'
+                //   border='1px solid teal'
+                  w='25%'
+                  h='65px'
+                  px='10px'
+                  py='15px'
                  >
-                   logo
-                   {/* todo */}
+                   <Heading as='em' 
+                   textAlign='center' 
+                   fontWeight='medium'
+                    fontSize='28px' color='#81E6D9'
+                   
+                   >EDU Solutions</Heading>
                  </Box>
                {/* first box contain logo of website starting end */}
                {/* second box which contain some import features reauired  like product about overview for website box start */}
                  <Box
-                  border='1px solid teal'
-                  w='45%'
-                  h='70px'
+                //   border='1px solid teal'
+                  w='50%'
+                  h='65px'
                  >
-                        features
-
-                    <HStack>
-                        {/* todo */}
-                    </HStack>
-
+                  <NavbarFeatures/>
                  </Box>
                {/* second box which contain some import features reauired for website box end */}
                {/* third box user profile pictures and login signup start box */}
                  <Box
-                   border='1px solid teal'
-                   w='35%'
-                   h='70px'
+                //    border='1px solid teal'
+                   w='20%'
+                   h='65px'
+                   px='20px'
+                   py='15px'
                  >
-                    Profile pictures
+                    {/* Profile pictures */}
+                    <Flex
+                        align='center'
+                        justify='space-around'
+                    >
                     <HStack>
-                      
+                        <Center 
+                        >
+                              <Button colorScheme='teal'>SignUp</Button>
+                        </Center>
                     </HStack>
+                    </Flex>
                 </Box>
                {/* third box user profile pictures and login signup end box */}
             </Flex>
