@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import MonetorsConnect from "../Components/ConnectMentors/MonetorsConnect";
 import About from "../Components/Home/About";
 import Overview from "../Components/Home/Overview";
 import { HomePages } from "./HomePages";
@@ -12,6 +13,7 @@ export const MainRoutes=()=>{
     return (
         <Routes>
             <Route path='/' element={<HomePages/>}>
+                <Route path="/mentor"  element={<MonetorsConnect/>}/>
                 <Route path="/about"  element={<About/>}/>
                 <Route path="/overview"  element={<Overview/>}/>
             </Route>

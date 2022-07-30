@@ -11,7 +11,7 @@ function NavbarFeatures() {
      alignItems='center'
      justifyContent='space-around'
      px='5px'
-     py='13px'
+     py='20px'
      gap={1}
     >
       {/* Home to redirect page start  */}

@@ -1,7 +1,9 @@
 import React from "react";
-import {Box,Flex,Heading,Highlight,Image,Text,Button} from "@chakra-ui/react"
+import {Box,Flex,Heading,Highlight,Image,Text} from "@chakra-ui/react"
+import { ConnectMentors } from "../ConnectMentors/ConnectMentors";
  const subTitle=['Connect Mentors']
 export const HomePageMain=()=>{
+
 
     return (
         // mentors details  mentors connected box  
@@ -44,9 +46,10 @@ export const HomePageMain=()=>{
                 >
                     <Heading fontSize='20px' fontWeight='medium'color='gray.400' >Live Connect Mentors</Heading>
                     <Text textAlign='justify'>Connect with mentors, ask questions, answer live polls, and get your doubts cleared - During the Live connect </Text>
-                    <Button>Connect</Button>
+                    {/* connect mentor page call */}
+                    <ConnectMentors/>
                 </Flex>
-               
+                {/* <ConnectMentors handleClick={handleClick}/> */}
              </Box>
          </Flex>
         </Box>
